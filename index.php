@@ -14,22 +14,31 @@
 $mysql = new mysqli('localhost', 'root', '', 'php-mysql');
 $mysql->query("SET NAMES 'utf8'");
 
-if ($mysql->connect_error) {
-    echo "Error Number:" . $mysql->connect_errno . "<br>";
-    echo "Error: " . $mysql->connect_error . "<br>" ;
-} else {
-    // echo "Host Info:" . $mysql->host_info ;
+// $mysql->query("INSERT INTO `test` (`name`, `bio`) VALUES ('Ilya', 'Full Text')");
 
-    //$mysql->query("DROP TABLE `test`");
+/*for ($i = 1; $i <= 5; $i++) {
+    $name = 'Bob ' . $i;
+    $mysql->query("INSERT INTO `test` (`name`, `bio`) VALUES ('$name', 'Full Text')");
+}*/
 
-/*    $mysql->query("CREATE TABLE `test`(
-    id INT(11) PRIMARY KEY AUTO_INCREMENT,
-    name VARCHAR(50) NOT NULL ,
-    bio TEXT NOT NULL
-)");*/
+// $mysql->query("UPDATE `test` SET `bio` = 'Hello World'");
+
+// $mysql->query("UPDATE `test` SET `name` = 'User' WHERE `id` = 7");
+
+// $mysql->query("UPDATE `test` SET `bio` = 'New Text' WHERE `id` <= 3");
+
+// $mysql->query("UPDATE `test` SET `bio` = 'YES' WHERE `name` = 'Bob 4'");
+
+// $mysql->query("DELETE FROM `test` WHERE `id` = 2");
+
+// $mysql->query("DELETE FROM `test` WHERE `id` > 3");
+
+// $mysql->query("DELETE FROM `test` WHERE  `id` = 8 OR `id` = 9");
+
+// $mysql->query("DELETE FROM `test` WHERE  `id` = 3 AND `name` = 'Bob 1'");
 
 
-}
+
 
 $mysql->close();
 ?>
